@@ -1,10 +1,13 @@
-document.getElementById('addTaskButton').addEventListener('click', function() {
-    var taskInput = document.getElementById('taskInput');
-    var taskText = taskInput.value;
+const taskInput = document.getElementById('taskInput');
+const addTaskBtn = document.getElementById('addTaskBtn');
+const taskList = document.getElementById('taskList');
+
+addTaskBtn.addEventListener('click', function() {
+    const taskText = taskInput.value;
     if (taskText) {
-        var li = document.createElement('li');
+        const li = document.createElement('li');
         li.textContent = taskText;
-        document.getElementById('taskList').appendChild(li);
+        taskList.appendChild(li);
         taskInput.value = '';
     }
 });
