@@ -1,7 +1,6 @@
 # llm-generated-web-app
 
 ## Summary
-
 Create a fully functional web application using modern web technologies (HTML, CSS, JavaScript):
 
 1. The app should be directly viewable in a browser, hosted via GitHub Pages.
@@ -11,7 +10,6 @@ Create a fully functional web application using modern web technologies (HTML, C
 5. Include a README.md explaining what the app does and how to use it.
 6. Ensure the app is self-contained, safe, and ready-to-run immediately after GitHub Pages deployment.
 7. Attach any example input files if needed to make the app functional out-of-the-box.
-
 
 ## Setup
 Open `index.html` locally or visit the GitHub Pages URL once deployed.
