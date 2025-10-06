@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head>
+<title>Markdown Renderer</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+</head><body>
+<div id="markdown-output"></div>
+<script>
+(async ()=> {
+  const params = new URLSearchParams(location.search);
+  const url = params.get('url') || 'input.md';
+  const md = await (await fetch(url)).text();
+  document.getElementById('markdown-output').innerHTML = marked.parse(md);
+})();
+</script>
+</body></html>
