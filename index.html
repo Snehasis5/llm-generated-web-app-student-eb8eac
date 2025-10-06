@@ -1,16 +1,22 @@
-<!doctype html>
-<html><head>
-<title>Markdown Renderer</title>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-</head><body>
-<div id="markdown-output"></div>
-<script>
-(async ()=> {
-  const params = new URLSearchParams(location.search);
-  const url = params.get('url') || 'input.md';
-  const md = await (await fetch(url)).text();
-  document.getElementById('markdown-output').innerHTML = marked.parse(md);
-})();
-</script>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input[type='text'] { width: 300px; padding: 10px; }
+        button { padding: 10px; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Simple To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task...">
+    <button id="addTaskButton">Add Task</button>
+    <ul id="taskList"></ul>
+    <script src="main.js"></script>
+</body>
+</html>
